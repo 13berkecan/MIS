@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class app1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
         System.out.print("Enter the telephone number in the form (XXX) XXX-XXXX: ");
         String numberAsWhole = input.nextLine();
 

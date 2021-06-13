@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class app1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
         System.out.print("Radius of circle: ");
         double radius = input.nextDouble();
 

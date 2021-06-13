@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class app2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
         double totalCharges = 0;
+        
         while(true) {
             System.out.print("Enter length of parking (a negative integer to quit): ");
             int hours = input.nextInt();

@@ -4,7 +4,6 @@ import java.util.LinkedList;
 public class app2 {
     public static void main(String[] args) {
         LinkedList<Integer> firstList = new LinkedList<>(Arrays.asList(0,1,2,3,4));
-
         LinkedList<Integer> secondList = new LinkedList<>(Arrays.asList(5,6,7,8,9));
 
         System.out.println("First List: ");

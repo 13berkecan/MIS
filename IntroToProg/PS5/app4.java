@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class app4 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
         System.out.print("Enter the strings to be compared seperated by space: ");
         String[] words = input.nextLine().split(" ");
         

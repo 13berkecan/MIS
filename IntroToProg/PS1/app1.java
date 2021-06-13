@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class app1 {
     public static void main(String[] args) {
-
         Scanner input = new Scanner(System.in);
         System.out.print("Enter value of each side of a triangle seperated by space: ");
         float a = input.nextFloat();

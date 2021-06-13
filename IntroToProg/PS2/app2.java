@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class app2 {
     public static void main(String[] args) {
-
         Scanner input = new Scanner(System.in);
         String[] names = new String[5];
         String[] grades = new String[5];
@@ -40,11 +39,10 @@ public class app2 {
             "B: ", bCount, 
             "C: ", cCount, 
             "D: ", dCount);
-
     }
 }
 
-/* 
+/*
 2-	A group of five students earned the following grades: 
 Student 1, ‘A’; student 2, C’; student 3, ‘B’; student 4, ‘A’ and student 5, ‘B’. 
 Write an application that reads a series of pairs of numbers as follows:

@@ -24,9 +24,9 @@ public class app4 {
                 System.out.println("&&&&&");
             }
         }
-
     }
 }
+
 /* 
 4-	Modify the given code to produce the output shown in each part of the problem. 
 Use proper indentation techniques. Make no changes other than inserting braces and changing the indentation of the code. 

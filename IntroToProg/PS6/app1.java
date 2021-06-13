@@ -5,9 +5,7 @@ import java.util.LinkedList;
 public class app1 {
     public static void main(String[] args) {
         LinkedList<Character> firstList = new LinkedList<>(Arrays.asList('a','b','c','d','e','f','g','h','i','j'));
-
         LinkedList<Character> secondList = new LinkedList<>(firstList);
-
         Collections.reverse(secondList);
 
         System.out.println("Original list:");

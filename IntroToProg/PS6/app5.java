@@ -7,7 +7,6 @@ public class app5 {
         ArrayList<String> firstList = new ArrayList<>(Arrays.asList("I","like", "watching", "series"));
         ArrayList<String> secondList = new ArrayList<>(Arrays.asList("I", "watch", "TV", "series"));
 
-        
         System.out.println("First List: ");
         for (String word : firstList) {
             System.out.printf("%s ", word);

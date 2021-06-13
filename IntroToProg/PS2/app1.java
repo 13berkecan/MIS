@@ -1,20 +1,16 @@
 import java.util.Scanner;
 
 public class app1 {
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) {  
         Scanner input = new Scanner(System.in);
-
         System.out.print("Size of the shape: ");
-
         int size = input.nextInt();
 
         getShape(size);
     }
 
     public static void getShape(int size) {
-
-        //up to length
+        //top to mid
         for (int line = 1; line < size; line++) {
             for (int star = 1; star <= line; star++) {
                 System.out.print("*");
@@ -22,14 +18,13 @@ public class app1 {
             System.out.println();
         }
 
-        //from length
+        //mid to bottom
         for (int line = size; line > 0; line--) {
             for (int star = 1; star <= line; star++) {
                 System.out.print("*");
             }
             System.out.println();
         }
-
     }
 }
 

@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class app5 {
     public static void main(String[] args) {
-
         Scanner input = new Scanner(System.in);
         System.out.print("Enter account number: ");
         int accountNumber = input.nextInt();
@@ -14,7 +13,6 @@ public class app5 {
         int totalCreditApplied = input.nextInt();
         System.out.print("Enter allowed credit limit: ");
         int creditLimit = input.nextInt();
-
 
         int newBalance = currentBalance + totalCharges - totalCreditApplied;
 

@@ -4,13 +4,11 @@ public class app5 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the sentence here: ");
-
         String sentence = input.nextLine().toUpperCase();
         String alphabet = "abcdefghijklmnopqrstuvwxyz".toUpperCase();
         int[] letterFrequency = new int[alphabet.length()];
 
         //String.topUpperCase() fails at i (converts it to İ) somehow??
-
         for (char letter : sentence.toCharArray()) {
             if (alphabet.indexOf(letter) != -1) {
                 letterFrequency[alphabet.indexOf(letter)] += 1;

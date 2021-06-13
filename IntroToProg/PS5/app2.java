@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class app2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
         System.out.print("Enter the five-letter word: ");
         String word = input.next();
         char[] letters = word.toCharArray();
@@ -24,7 +23,7 @@ public class app2 {
                 }
             }
         }
-
+        
         for (String pair : pairs) {
             System.out.println(pair);
         }

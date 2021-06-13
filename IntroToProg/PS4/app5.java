@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class app5 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
         System.out.printf("Which fibonacci number: ");
         int number = input.nextInt();
         int fibonacciNumber = getNthFibonacci(number);
@@ -14,7 +13,6 @@ public class app5 {
     
     public static int getNthFibonacci(int nth) {
         int count, main, next, temp;
-
         main = 0;
         next = 1;
         
@@ -30,10 +28,10 @@ public class app5 {
                 return main;
             }
         }
-
         return main;
     }
 }
+
 /* 
 5-	The Fibonacci series 0, 1, 1, 2, 3, 5, 8, 13, 21, … begins with the terms 0 and 1 and 
 has the property that each succeeding term is the sum of the two preceding terms. 

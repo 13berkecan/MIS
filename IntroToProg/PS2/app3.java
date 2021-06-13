@@ -2,12 +2,9 @@ import java.util.Scanner;
 
 public class app3 {
     public static void main(String[] args) {
-
         Scanner input = new Scanner(System.in);
-
         System.out.print("How many integer to compute from: ");
         int size = input.nextInt();
-
         System.out.print("Input integers seperated by space: ");
         int[] nums = new int[size];
 
@@ -25,25 +22,21 @@ public class app3 {
 
     public static int getMinimum (int[] nums) {
         int min = nums[0];
-
         for (int num : nums) {
             if (num < min) {
                 min = num;
             }
         }
-
         return min;
     }
 
     public static int getMaximum (int[] nums) {
         int max = nums[0];
-
         for (int num : nums) {
             if (num > max) {
                 max = num;
             }
         }
-
         return max;
     }
 }

@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class app3 {
     public static void main(String[] args) {
         Scanner inputs = new Scanner(System.in);
-
         System.out.print("Input the tempeture with the type seperated by space: ");
         double temperature = inputs.nextInt();
         String temperatureType = inputs.next();
@@ -25,7 +24,6 @@ public class app3 {
         return 9.0 / 5.0 * celsius + 32;
     }
 }
-
 
 /*
 3-	Implement the following integer methods:

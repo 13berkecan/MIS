@@ -12,9 +12,7 @@ public class app1 {
 
     public static long power(int base, int exponent) {
         System.out.printf("%d, %d%n", base, exponent);
-        if (exponent == 1) {
-            return base;
-        }
+        if (exponent == 1) { return base; }
         return base * power(base, exponent-1);
     }
 }

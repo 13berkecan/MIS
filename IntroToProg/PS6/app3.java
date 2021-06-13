@@ -17,7 +17,6 @@ public class app3 {
         ListIterator<String> iterator = list.listIterator(list.size());
 
         System.out.println("Reversed List: ");
-
         while(iterator.hasPrevious()) {
             System.out.printf("%s ", iterator.previous());
         }

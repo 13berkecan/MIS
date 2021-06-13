@@ -21,7 +21,6 @@ public class app3 {
             boardingSeat = getSeat(boardingType, statusOfSeats);
 
             //If no seat available for the type
-            
             if (boardingSeat == 13) {
                 System.out.printf("No avilable seat for %s, would you like to get a ticket for other class? (Y/N): ", boardingType);
                 String answer = input.next();
@@ -39,7 +38,6 @@ public class app3 {
                 }
             }
             
-
             System.out.printf("Boarding %s in seat %d.%n", 
                 boardingType, boardingSeat);
         }
@@ -47,7 +45,6 @@ public class app3 {
 
     public static int getSeat(String boardingType, boolean[] statusOfSeats) {
         //Returns true if found seat and change seat value else false
-
         if (boardingType.equals("First Class")) {
             for (int seat = 0; seat < 5; seat++) {
                 if (statusOfSeats[seat] == false) {
@@ -65,7 +62,6 @@ public class app3 {
                 }
             }
         }
-
         return 13;
     }
 
@@ -76,7 +72,6 @@ public class app3 {
         } else if (boardingType.equals(boardingTypes[1])) {
             boardingType = boardingTypes[0];
         }
-
         return getSeat(boardingType, statusOfSeats);
     }
 }
