@@ -2,47 +2,21 @@ import java.util.Scanner;
 
 public class app1 {
     public static void main(String[] args) {
-        
         Scanner input = new Scanner(System.in);
+        
+        System.out.print("Radius of circle: ");
+        double radius = input.nextDouble();
 
-        System.out.print("Size of the shape: ");
-
-        int size = input.nextInt();
-
-        getShape(size);
+        circleArea(radius);
     }
 
-    public static void getShape(int size) {
-
-        //up to length
-        for (int line = 1; line < size; line++) {
-            for (int star = 1; star <= line; star++) {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
-
-        //from length
-        for (int line = size; line > 0; line--) {
-            for (int star = 1; star <= line; star++) {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
-
+    public static void circleArea(double radius) {
+        double area = Math.PI*Math.pow(radius, 2);
+        System.out.printf("Area of circle with %.2f radius is %.2f%n", radius, area);
     }
 }
 
-/* 
-1-	Write an application that prints a half of the diamond shape. 
-Get the maximum number of stars which will appear in the middle of the shape from the user. 
-Output should look similar to:
-*
-**
-***
-****
-***
-**
-*
-
+/*
+1-	Write an application that prompts the user for the radius of a circle 
+and uses a method called circleArea to calculate the area of the circle. 
 */

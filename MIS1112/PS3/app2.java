@@ -2,55 +2,27 @@ import java.util.Scanner;
 
 public class app2 {
     public static void main(String[] args) {
-
         Scanner input = new Scanner(System.in);
-        String[] names = new String[5];
-        String[] grades = new String[5];
 
-        int aCount = 0;
-        int bCount = 0;
-        int cCount = 0;
-        int dCount = 0;
+        while(true) {
+            System.out.print("Enter the integer: ");
+            int number = input.nextInt();
 
-        for (int seq = 0; seq < 5; seq++) {
-            System.out.print("Enter name and grade seperated by space: ");
-            names[seq] = input.next();
-            grades[seq] = input.next();
-        }
-
-        for (String grade : grades) {
-            switch (grade) {
-                case "A":
-                    aCount++;
-                    break;
-                case "B":
-                    bCount++;
-                    break;
-                case "C":
-                    cCount++;
-                    break;
-                case "D":
-                    dCount++;
-                    break;
+            if (isDivisible(number)) {
+                System.out.printf("%d is divisible by 5.%n", number);
+            } else {
+                System.out.printf("%d is not divisible by 5.%n", number);
             }
         }
+    }
 
-        System.out.printf("Number of students each grade has:%n%s%d%n%s%d%n%s%d%n%s%d%n",
-            "A: ", aCount, 
-            "B: ", bCount, 
-            "C: ", cCount, 
-            "D: ", dCount);
-
+    public static boolean isDivisible(int number) {
+        return (number % 5 == 0 && number != 0) ? true : false;
     }
 }
 
-/* 
-2-	A group of five students earned the following grades: 
-Student 1, ‘A’; student 2, C’; student 3, ‘B’; student 4, ‘A’ and student 5, ‘B’. 
-Write an application that reads a series of pairs of numbers as follows:
-a) student name
-b) student letter grade
-Your program should use a switch statement to determine how many students got a grade of ‘A’,
-how many got a grade of ‘B’, how many got a grade of ‘C’, and how many got a grade of ‘D’. 
-Use a loop as needed to input the five student grades, and then finally display the results.
+/*
+2-	Write a method isDivisible that uses the remainder operator (%) to determine whether ten input integers are divisible by 5 or not. 
+The method should take an integer argument and return true if the integer is divisible by 5 and false otherwise. Incorporate this 
+method into an application that inputs a sequence of integers (one at a time) and determines the result.
 */

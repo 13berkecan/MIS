@@ -2,23 +2,47 @@ import java.util.Scanner;
 
 public class app1 {
     public static void main(String[] args) {
-
+        
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter value of each side of a triangle seperated by space: ");
-        float a = input.nextFloat();
-        float b = input.nextFloat();
-        float c = input.nextFloat();
 
-        if ( a+b > c && a+c > b && b+c > a) {
-            System.out.println("Given triangle is valid");
-        } else { 
-            System.out.println("Given triangle is not valid");
+        System.out.print("Size of the shape: ");
+
+        int size = input.nextInt();
+
+        getShape(size);
+    }
+
+    public static void getShape(int size) {
+
+        //up to length
+        for (int line = 1; line < size; line++) {
+            for (int star = 1; star <= line; star++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
+
+        //from length
+        for (int line = size; line > 0; line--) {
+            for (int star = 1; star <= line; star++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
     }
 }
 
-/*
-1-	Write an application that reads three nonzero values entered by the user and determines and prints whether 
-they could represent the sides of a triangle. 
-Check “triangle inequality theorem”: https://images.app.goo.gl/h2FvfEVJHfrYDEsR9 
+/* 
+1-	Write an application that prints a half of the diamond shape. 
+Get the maximum number of stars which will appear in the middle of the shape from the user. 
+Output should look similar to:
+*
+**
+***
+****
+***
+**
+*
+
 */
