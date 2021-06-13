@@ -1,37 +1,29 @@
-import java.util.Random;
+import java.util.Scanner;
 
 public class app4 {
     public static void main(String[] args) {
-        int[] sumOfTwoDice = new int[] {2,3,4,5,6,7,8,9,10,11,12};
-        int[] frequencyOfSums = new int[11];
+        Scanner input = new Scanner(System.in);
 
-        for (int i = 0; i < 36_000_000; i++) {
-            int sum = rollTwoDice();
-            frequencyOfSums[sum-2]++;
-            //Indexed to match sumOfTwoDice
+        System.out.print("Enter the strings to be compared seperated by space: ");
+        String[] words = input.nextLine().split(" ");
+        
+        String baseWord = words[0];
+        String compareWord = words[1];
+
+        System.out.print("Enter the values of starting index and length of comparison seperated by space: ");
+        int startIndex = input.nextInt();
+        int lengthOfComparison = input.nextInt();
+
+        if (baseWord.regionMatches(true, startIndex, compareWord, startIndex, lengthOfComparison)) {
+            System.out.println("Compared strings are equal.");
+        } else {
+            System.out.println("Compared strings are not equal.");
         }
-
-        for (int i = 0; i < frequencyOfSums.length; i++) {
-            System.out.printf("%-2d%10d%n", sumOfTwoDice[i], frequencyOfSums[i]);
-        } 
-    }
-    
-    public static int rollTwoDice() {
-        Random randomInteger = new Random();
-        int dice1 = randomInteger.nextInt(6)+1;
-        int dice2 = randomInteger.nextInt(6)+1;
-
-        return dice1+dice2;
     }
 }
 
-/* 
-4-	Write an application to simulate the rolling of two dice. 
-The application should use an object of class Random once to roll the first die and again to roll the second die. 
-The sum of the two values should then be calculated. 
-Each die can show an integer value from 1 to 6, so the sum of the values will vary from 2 to 12, with 7 being the most frequent sum, 
-and 2 and 12 the least frequent. Figure 6.21 shows the 36 possible combinations of the two dice. 
-Your application should roll the dice 36,000,000 times. 
-Use a one-dimensional array to tally the number of times each possible sum appears. 
-Display the results in tabular format.
+/*
+4-	Write an application that uses String method regionMatches to compare two strings input by the user. 
+The application should input the number of characters to be compared and the starting index of the comparison. 
+The application should state whether the strings are equal. Ignore the case of the characters when performing the comparison. 
 */

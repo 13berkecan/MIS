@@ -3,41 +3,28 @@ import java.util.Scanner;
 public class app5 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        System.out.print("Enter the sentence here: ");
 
-        System.out.printf("Which fibonacci number: ");
-        int number = input.nextInt();
-        int fibonacciNumber = getNthFibonacci(number);
+        String sentence = input.nextLine().toUpperCase();
+        String alphabet = "abcdefghijklmnopqrstuvwxyz".toUpperCase();
+        int[] letterFrequency = new int[alphabet.length()];
 
-        System.out.printf("%dth fibonacci number is %d", number, fibonacciNumber);
-        //To get maximum fibonacci number Java integer can have, input above 45
-    }
-    
-    public static int getNthFibonacci(int nth) {
-        int count, main, next, temp;
+        //String.topUpperCase() fails at i (converts it to İ) somehow??
 
-        main = 0;
-        next = 1;
-        
-        if (nth == 1) {return 0;};
-        if (nth == 2) {return 1;};
- 
-        for (count = 2; count <= nth; count++) {
-            temp = main + next;
-            main = next;
-            next = temp;
-
-            if (temp < 0) {
-                return main;
+        for (char letter : sentence.toCharArray()) {
+            if (alphabet.indexOf(letter) != -1) {
+                letterFrequency[alphabet.indexOf(letter)] += 1;
             }
         }
 
-        return main;
+        for (int i = 0; i < alphabet.length(); i++) {
+            System.out.printf("%s: %d%n", alphabet.charAt(i), letterFrequency[i]);
+        }
     }
 }
-/* 
-5-	The Fibonacci series 0, 1, 1, 2, 3, 5, 8, 13, 21, … begins with the terms 0 and 1 and 
-has the property that each succeeding term is the sum of the two preceding terms. 
-Write a method fibonacci(n) that calculates the nth Fibonacci number. 
-Incorporate this method into an application that enables the user to enter the value of n.  
-Determine the largest Fibonacci number that can be displayed on your system.
+
+/*
+5-	Write an application that inputs a line of text and uses String method indexOf to determine the total number of occurrences 
+of each letter of the alphabet in the text. Uppercase and lowercase letters should be counted  together. 
+Store the totals for each letter in an array, and print the values in tabular format after the totals have been determined.
 */

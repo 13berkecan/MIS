@@ -1,29 +1,22 @@
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class app4 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        String[] words = new String[] {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"};
+        ArrayList<String> list = new ArrayList<>(Arrays.asList(words));
 
-        System.out.print("Enter the strings to be compared seperated by space: ");
-        String[] words = input.nextLine().split(" ");
-        
-        String baseWord = words[0];
-        String compareWord = words[1];
+        Collections.sort(list);
 
-        System.out.print("Enter the values of starting index and length of comparison seperated by space: ");
-        int startIndex = input.nextInt();
-        int lengthOfComparison = input.nextInt();
+        int threeIndex = Collections.binarySearch(list, "Three");
+        int fiveIndex = Collections.binarySearch(list, "Five");
 
-        if (baseWord.regionMatches(true, startIndex, compareWord, startIndex, lengthOfComparison)) {
-            System.out.println("Compared strings are equal.");
-        } else {
-            System.out.println("Compared strings are not equal.");
-        }
+        System.out.printf("Index of word Three: %d%n", threeIndex);
+        System.out.printf("Index of word Five: %d%n", fiveIndex);
     }
 }
 
 /*
-4-	Write an application that uses String method regionMatches to compare two strings input by the user. 
-The application should input the number of characters to be compared and the starting index of the comparison. 
-The application should state whether the strings are equal. Ignore the case of the characters when performing the comparison. 
+4-	Create an ArrayList consists of 10 string elements and use binarySearch to find the location of 3. and 5. elements. 
 */

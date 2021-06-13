@@ -1,30 +1,32 @@
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedList;
+import java.util.Scanner;
 
 public class app1 {
     public static void main(String[] args) {
-        LinkedList<Character> firstList = new LinkedList<>(Arrays.asList('a','b','c','d','e','f','g','h','i','j'));
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input base and exponent value to calculate: ");
+        int base = input.nextInt();
+        int exponent = input.nextInt();
 
-        LinkedList<Character> secondList = new LinkedList<>(firstList);
+        System.out.printf("%d to the power of %d is %d.", base, exponent, power(base, exponent));
+    }
 
-        Collections.reverse(secondList);
-
-        System.out.println("Original list:");
-        for (char letter : firstList) {
-            System.out.printf("%s ", letter);
+    public static long power(int base, int exponent) {
+        System.out.printf("%d, %d%n", base, exponent);
+        if (exponent == 1) {
+            return base;
         }
-        System.out.println();
-
-        System.out.println("Reversed list: ");
-        for (char letter : secondList) {
-            System.out.printf("%s ", letter);
-        }
+        return base * power(base, exponent-1);
     }
 }
 
 /*
-1-	Write a program that creates a LinkedList object of 10 characters, 
-then creates a second LinkedList object containing a copy of the first list, 
-but in reverse order. Use Collections methods. 
+1-	Write a recursive method power(base, exponent) that, when
+called, returns
+base exponent
+For example, power(3,4) = 3 * 3 * 3 * 3. Assume that exponent is an integer greater than or equal
+to 1. Hint: The recursion step should use the relationship
+base exponent = base · base exponent – 1 
+and the terminating condition occurs when exponent is equal to 1, because
+base1 = base
+Incorporate this method into a program that enables the user to enter the base and exponent. 
 */

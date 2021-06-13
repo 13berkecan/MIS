@@ -1,18 +1,30 @@
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.ListIterator;
 
 public class app3 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        ArrayList<String> list = new ArrayList<>(Arrays.asList("I", "Love", "Coding", "Also", "MIS"));
 
-        System.out.print("Enter integer code of a char: ");
-        int value = input.nextInt();
+        list.add("Adding");
+        list.add("Three");
+        list.add("Words");
 
-        System.out.printf("Integer code of char %d represents '%s'.%n", value, (char) value);
+        printReversedList(list);
+    }
+
+    private static void printReversedList (ArrayList<String> list) {
+        ListIterator<String> iterator = list.listIterator(list.size());
+
+        System.out.println("Reversed List: ");
+
+        while(iterator.hasPrevious()) {
+            System.out.printf("%s ", iterator.previous());
+        }
     }
 }
 
 /*
-3-	Write an application that inputs an integer code for a character and displays the corresponding character. 
-Modify this application so that it generates all possible three-digit codes in the range from 000 to 255 
-and attempts to print the corresponding characters. 
+3-	Create an ArrayList consists of 5 string elements. Add 3 new elements to this list by using List methods. 
+Use an Iterator method to print elements in reversed order. 
 */

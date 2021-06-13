@@ -1,30 +1,34 @@
+import java.util.Scanner;
+
 public class app1 {
     public static void main(String[] args) {
-        for (int number = 0; number < 10000; number++) {
-            if (isPrime(number)) {
-                System.out.printf("%d ", number);
-            }
-        }
-    }
+        Scanner input = new Scanner(System.in);
 
-    public static boolean isPrime(int number) {
-        if (number <= 1) {
-            return false;
-        }
-        
-        for (int i=2; i < number; i++) {
-            if (number % i == 0) {
-                return false;
-            }
-        }
+        System.out.print("Enter the telephone number in the form (XXX) XXX-XXXX: ");
+        String numberAsWhole = input.nextLine();
 
-        return true;
+        String[] tokens;
+        String areaToken;
+        String bodyToken;
+        String tailToken;
+
+        tokens = numberAsWhole.split(" |-");
+        areaToken = tokens[0].replaceAll("\\(|\\)", "");
+        bodyToken = tokens[1];
+        tailToken = tokens[2];
+
+        System.out.printf("Area Code:               %s%n", areaToken);
+        System.out.printf("First three digits:      %s%n", bodyToken);
+        System.out.printf("Last four digits:        %s%n", tailToken);
+        System.out.printf("Telephone number:        %s%s%s%n",areaToken,bodyToken,tailToken);
     }
 }
 
 /* 
-1-	A positive integer is prime if it’s divisible by only 1 and itself. 
-For example, 2, 3, 5 and 7 are prime, but 4, 6, 8 and 9 are not. 
-The number 1, by definition, is not prime. Write a method that determines whether a number is prime. 
-Use this method in an application that determines and displays all the prime numbers less than 10,000. 
+1-	Write an application that inputs a telephone number as a string in the form (555) 555-5555. 
+The application should use String method split to extract the area code as a token, 
+the first three digits of the phone number as a token and the last four digits of the phone number as a token. 
+The seven digits of the phone number should be concatenated into one string. 
+Both the area code and the phone number should be printed. 
+Remember that you’ll have to change delimiter characters during the tokenization process.
 */

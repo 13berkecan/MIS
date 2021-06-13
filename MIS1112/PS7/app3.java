@@ -1,30 +1,32 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.ListIterator;
+import java.util.Scanner;
 
 public class app3 {
     public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<>(Arrays.asList("I", "Love", "Coding", "Also", "MIS"));
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input a string to reverse it: ");
+        String str = input.nextLine();
 
-        list.add("Adding");
-        list.add("Three");
-        list.add("Words");
-
-        printReversedList(list);
+        System.out.printf("String '%s' reversed is '%s'.", str, stringReverseDefault(str.toCharArray()));
     }
 
-    private static void printReversedList (ArrayList<String> list) {
-        ListIterator<String> iterator = list.listIterator(list.size());
+    public static String stringReverseDefault(char[] chars) {
+        return new String(stringReverse(chars, chars.length-1));
+    }
 
-        System.out.println("Reversed List: ");
-
-        while(iterator.hasPrevious()) {
-            System.out.printf("%s ", iterator.previous());
+    private static char[] stringReverse(char[] chars, int currentIndex) {
+        if (currentIndex > chars.length/2) {
+            char temp = chars[chars.length-1-currentIndex];
+            chars[chars.length-1-currentIndex] = chars[currentIndex];
+            chars[currentIndex] = temp;
+            return stringReverse(chars, currentIndex-1);
+        } else {
+            return chars;
         }
-    }
+    } 
 }
 
 /*
-3-	Create an ArrayList consists of 5 string elements. Add 3 new elements to this list by using List methods. 
-Use an Iterator method to print elements in reversed order. 
+3-	Write a recursive method stringReverse that takes a character
+array containing a string as an argument and prints the string backward. [Hint: Use String method
+toCharArray, which takes no arguments, to get a char array containing the characters in the String.]
 */

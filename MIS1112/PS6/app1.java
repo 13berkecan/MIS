@@ -1,34 +1,30 @@
-import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedList;
 
 public class app1 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        LinkedList<Character> firstList = new LinkedList<>(Arrays.asList('a','b','c','d','e','f','g','h','i','j'));
 
-        System.out.print("Enter the telephone number in the form (XXX) XXX-XXXX: ");
-        String numberAsWhole = input.nextLine();
+        LinkedList<Character> secondList = new LinkedList<>(firstList);
 
-        String[] tokens;
-        String areaToken;
-        String bodyToken;
-        String tailToken;
+        Collections.reverse(secondList);
 
-        tokens = numberAsWhole.split(" |-");
-        areaToken = tokens[0].replaceAll("\\(|\\)", "");
-        bodyToken = tokens[1];
-        tailToken = tokens[2];
+        System.out.println("Original list:");
+        for (char letter : firstList) {
+            System.out.printf("%s ", letter);
+        }
+        System.out.println();
 
-        System.out.printf("Area Code:               %s%n", areaToken);
-        System.out.printf("First three digits:      %s%n", bodyToken);
-        System.out.printf("Last four digits:        %s%n", tailToken);
-        System.out.printf("Telephone number:        %s%s%s%n",areaToken,bodyToken,tailToken);
+        System.out.println("Reversed list: ");
+        for (char letter : secondList) {
+            System.out.printf("%s ", letter);
+        }
     }
 }
 
-/* 
-1-	Write an application that inputs a telephone number as a string in the form (555) 555-5555. 
-The application should use String method split to extract the area code as a token, 
-the first three digits of the phone number as a token and the last four digits of the phone number as a token. 
-The seven digits of the phone number should be concatenated into one string. 
-Both the area code and the phone number should be printed. 
-Remember that you’ll have to change delimiter characters during the tokenization process.
+/*
+1-	Write a program that creates a LinkedList object of 10 characters, 
+then creates a second LinkedList object containing a copy of the first list, 
+but in reverse order. Use Collections methods. 
 */

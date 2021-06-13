@@ -1,39 +1,26 @@
-import java.util.Arrays;
-import java.util.LinkedList;
+import java.util.Scanner;
 
 public class app2 {
     public static void main(String[] args) {
-        LinkedList<Integer> firstList = new LinkedList<>(Arrays.asList(0,1,2,3,4));
+        Scanner input = new Scanner(System.in);
+        System.out.print("Which two number to find greatest common divisor of: ");
+        int x = input.nextInt();
+        int y = input.nextInt();
 
-        LinkedList<Integer> secondList = new LinkedList<>(Arrays.asList(5,6,7,8,9));
-
-        System.out.println("First List: ");
-        for (int num : firstList) {
-            System.out.printf("%d ", num);
-        }
-        System.out.println();
-
-        System.out.println("Second List: ");
-        for (int num : secondList) {
-            System.out.printf("%d ", num);
-        }
-        System.out.println();
-
-        concatenateLinkedList(firstList, secondList);
-
-        System.out.println("Concantenated List: ");
-        for (int num : firstList) {
-            System.out.printf("%d ", num);
-        }
+        System.out.printf("Greates common divisor of %d and %d is %d.", x, y, gcd(x,y));
     }
 
-    private static void concatenateLinkedList(LinkedList firstList, LinkedList secondList) {
-        firstList.addAll(secondList);
-        secondList = null;
+    public static int gcd(int x, int y) {
+        if (y == 0) {
+            return x;
+        }
+        return 1 * gcd(y, x % y);
     }
 }
 
 /*
-2-	Write a program that creates two LinkedList object and a method to concatenate these two lists. 
-Call this method in the main method and print out each element of the concatenated list. Use LinkedList methods. 
+2-	The greatest common divisor of integers x and y is the largest
+integer that evenly divides into both x and y. Write a recursive method gcd that returns the greatest common divisor of x and y. 
+The gcd of x and y is defined recursively as follows: If y is equal to 0, then gcd(x, y) is x; 
+otherwise, gcd(x, y) is gcd(y, x % y), where % is the remainder operator.
 */

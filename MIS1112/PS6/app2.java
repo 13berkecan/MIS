@@ -1,40 +1,39 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.Arrays;
+import java.util.LinkedList;
 
 public class app2 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        LinkedList<Integer> firstList = new LinkedList<>(Arrays.asList(0,1,2,3,4));
 
-        System.out.print("Enter the five-letter word: ");
-        String word = input.next();
-        char[] letters = word.toCharArray();
-        ArrayList<String> pairs = new ArrayList<>();
+        LinkedList<Integer> secondList = new LinkedList<>(Arrays.asList(5,6,7,8,9));
 
-        for (int i = 0; i < word.length(); i++) {
-            for (int j = 0; j < word.length(); j++) {
-                for (int k = 0; k < word.length(); k++) {
-                    //To prevent repetition on same index char
-                    if ( i != j && j != k && k != i) {
-                        String pair = new String(new char[] {letters[i], letters[j], letters[k]});
-                        //Check if already found
-                        if (!pairs.contains(pair)) {
-                            pairs.add(pair);
-                        }
-                    }
-                }
-            }
+        System.out.println("First List: ");
+        for (int num : firstList) {
+            System.out.printf("%d ", num);
         }
+        System.out.println();
 
-        for (String pair : pairs) {
-            System.out.println(pair);
+        System.out.println("Second List: ");
+        for (int num : secondList) {
+            System.out.printf("%d ", num);
         }
+        System.out.println();
+
+        concatenateLinkedList(firstList, secondList);
+
+        System.out.println("Concantenated List: ");
+        for (int num : firstList) {
+            System.out.printf("%d ", num);
+        }
+    }
+
+    private static void concatenateLinkedList(LinkedList firstList, LinkedList secondList) {
+        firstList.addAll(secondList);
+        secondList = null;
     }
 }
 
-/* 
-2-	Write an application that reads a five-letter word from the user and produces every possible three-letter string 
-that can be derived from the letters of that word. 
-For example, the three-letter words produced from the word “bathe” include “ate,” “bat,” “bet,” “tab,” “hat,” “the” and “tea.”
+/*
+2-	Write a program that creates two LinkedList object and a method to concatenate these two lists. 
+Call this method in the main method and print out each element of the concatenated list. Use LinkedList methods. 
 */
-
-

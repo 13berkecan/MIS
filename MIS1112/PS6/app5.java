@@ -1,30 +1,43 @@
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class app5 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter the sentence here: ");
+        ArrayList<String> firstList = new ArrayList<>(Arrays.asList("I","like", "watching", "series"));
+        ArrayList<String> secondList = new ArrayList<>(Arrays.asList("I", "watch", "TV", "series"));
 
-        String sentence = input.nextLine().toUpperCase();
-        String alphabet = "abcdefghijklmnopqrstuvwxyz".toUpperCase();
-        int[] letterFrequency = new int[alphabet.length()];
+        
+        System.out.println("First List: ");
+        for (String word : firstList) {
+            System.out.printf("%s ", word);
+        }
+        System.out.println();
 
-        //String.topUpperCase() fails at i (converts it to İ) somehow??
+        System.out.println("Second List: ");
+        for (String word : secondList) {
+            System.out.printf("%s ", word);
+        }
+        System.out.println();
 
-        for (char letter : sentence.toCharArray()) {
-            if (alphabet.indexOf(letter) != -1) {
-                letterFrequency[alphabet.indexOf(letter)] += 1;
-            }
+        boolean disjoint = Collections.disjoint(firstList, secondList);
+        if (disjoint) {
+            System.out.println("Lists do not have elements in common."); 
+        } else {
+            System.out.println("Lists have elements in common.");
         }
 
-        for (int i = 0; i < alphabet.length(); i++) {
-            System.out.printf("%s: %d%n", alphabet.charAt(i), letterFrequency[i]);
+        firstList.addAll(secondList);
+        secondList = null;
+
+        System.out.println("Lists concatenated: ");
+        for (String word : firstList) {
+            System.out.printf("%s ", word);
         }
     }
 }
 
 /*
-5-	Write an application that inputs a line of text and uses String method indexOf to determine the total number of occurrences 
-of each letter of the alphabet in the text. Uppercase and lowercase letters should be counted  together. 
-Store the totals for each letter in an array, and print the values in tabular format after the totals have been determined.
+5-	Create two ArrayLists of 4 string elements each and concatenate these two lists using Collections methods 
+and examine whether they have elements in common. 
 */
