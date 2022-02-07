@@ -1,1 +1,1 @@
-# MIS homeworks
+# MIS homeworks and projects
