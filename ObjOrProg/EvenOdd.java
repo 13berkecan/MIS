@@ -23,11 +23,11 @@ class EvenOrOdd {
 			//for repetition
 			System.out.print("Enter y to play again, n to quit(y/n):");
 			if (input.next().equals("n")) { break; }
-			//this is stupid
+			//this is a weird necessity 
 			System.out.print("?");
 		}
 		
-		//very very stupid
+		//a very weird necessity
 		System.out.println("?");
 	}
 	

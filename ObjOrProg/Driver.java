@@ -18,9 +18,7 @@
 import java.util.Scanner;
 
 public class Driver {
-	
 	public static void main(String[] args) {
-		
 		//declare HourlyEmployee variable
 		//and required information for it
 		HourlyEmployee emp;
@@ -56,7 +54,6 @@ public class Driver {
 }
 
 class Employee {
-	
 	//core info
 	private String firstName;
 	private	String lastName;
@@ -87,7 +84,6 @@ class Employee {
 }
 
 class HourlyEmployee extends Employee {
-	
 	//amount of hour worked and pay per hour
 	private double hours;
 	private double wage;
