@@ -8,9 +8,6 @@ h1, p {
     margin: 0px;
     color: hsl(0, 0%, 65%);
 }
-form {
-
-}
 input {
     width: 100%;
     padding: 5%;
@@ -20,7 +17,6 @@ input {
 }
 button {
     width: 100%;
-
     box-sizing: border-box;
     border: none;
     background-color: transparent;
