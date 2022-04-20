@@ -5,7 +5,33 @@ html, body {
     padding: 0px;
 }
 h1, p {
+    color: hsl(0, 0%, 65%);
+}
+form {
+    height: 100%;
+    width: 100%;
     margin: 0px;
+    padding: 0px;
+}
+input {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 3%;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: solid thin hsl(0, 0%, 65%);
+}
+button {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 3%;
+    border: none;
+    background-color: transparent;
+    color: hsl(0, 0%, 65%);
+}
+label {
     color: hsl(0, 0%, 65%);
 }
 .page {
@@ -17,4 +43,35 @@ h1, p {
     align-items: center;
     justify-content: center;
     background-color: hsl(0, 0%, 13%);
+}
+.body {
+    height: auto;
+    width: 40%;
+    margin: 0px;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: thin solid hsl(0, 0%, 65%);
+}
+.row {
+    height: 10%;
+    width: 90%;
+    margin: 2% 5% 2% 5%;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.row-sub {
+    height: 100%;
+    width: 40%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
