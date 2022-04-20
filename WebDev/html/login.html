@@ -6,7 +6,32 @@
 </head>
 <body>
     <div class="page">
-        
+        <div class="body">
+            <form action="">
+                <div class="row" style="justify-content: center;">
+                    <h1>Login</h1>
+                </div>
+                <div class="row">
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="row">
+                    <input type="password" name="password" id="password" placeholder="Enter your password">
+                </div>
+                <div class="row" style="padding-left: 7%; padding-right: 7%; width: 76%;">
+                    <div class="row-sub" style="justify-content: flex-start;">
+                        <input style="height: auto; width: fit-content;" type="checkbox" name="rememberme" id="rememberme" value="yes">
+                        <label style="margin-left: 5%;" for="rememberme"> Remember me? </label>
+                    </div>
+                    <div class="row-sub">
+                            <button type="button" onClick="window.location.href='./forgot.html'"> Forgot your password? </button>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <input type="submit" placeholder="SUBMIT">
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
