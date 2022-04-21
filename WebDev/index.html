@@ -47,7 +47,13 @@
                 </div>
                 <div class="body-core">
                     <div class="body-core-top">
-
+                        <div>
+                            <h1 id="date">date</h1>
+                            <h1 id="time">time</h1>
+                        </div>
+                        <script>
+                            setInterval(getDateTime(), 1000);
+                        </script>
                     </div>
                     <div class="body-core-bottom">
                         <div class="bottom-row">
@@ -134,7 +140,7 @@
                 <div class="body-side">
                     <div class="item-reminder">
                         <h1>To Do by</h1>
-                        <p style="justify-self: center;"> 22/04/2022 </p>
+                        <p> <date>22/04/2022</date> <time>21:00</time> </p>
                         <br>
                         <p>
                             Etiam id mauris risus. Phasellus vel purus tincidunt, interdum ex vitae, commodo felis. Morbi augue arcu, efficitur et erat ac, rhoncus ultrices lacus. Nam bibendum porta libero ut lacinia. Nullam
