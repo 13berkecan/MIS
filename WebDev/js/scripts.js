@@ -4,4 +4,6 @@ function getDateTime () {
     let time = datentime.toLocaleTimeString("en-Us", {hour12: false, hour: "2-digit", minute: "2-digit"})
     document.getElementById("date").innerHTML=date;
     document.getElementById("time").innerHTML=time;
+
+    setTimeout(getDateTime, 1000);
 }

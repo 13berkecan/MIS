@@ -18,6 +18,22 @@ button {
     background-color: transparent;
     color: hsl(0, 0%, 65%);
 }
+a {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    color:hsl(0, 0%, 65%);
+    text-decoration: none;
+}
+img {
+    object-fit: cover; 
+    display: block;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
 ::-webkit-scrollbar {
     display: none;
 }
@@ -37,7 +53,7 @@ button {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    border-bottom: thin solid hsl(0, 0%, 65%);
+    /*border-bottom: thin solid hsl(0, 0%, 65%);*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -49,6 +65,32 @@ button {
     padding: 0px;
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+.header-option {
+    height: 100%; 
+    width: auto; 
+    margin-right: 6.5%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+.profile {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.profile :hover {
+    height: 50px;
+    width: 50px;
+    background-color: hsl(0, 0%, 65%, 15%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .body {
     height: 93.5%;
@@ -102,8 +144,10 @@ button {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    /**
     border-right: thin solid hsl(0, 0%, 65%);
     border-left: thin solid hsl(0, 0%, 65%);
+    **/
     display: flex;
     flex-direction: column;
 }
@@ -113,7 +157,13 @@ button {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    /**
     border-bottom: thin solid hsl(0, 0%, 65%);
+    **/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .body-core-bottom {
     height: 50%;
@@ -138,7 +188,7 @@ button {
     height: 100%;
     width: 30%;
     margin: 0% 1.65% 0% 1.65%;
-    padding: 2%;
+    padding: 1%;
     flex-direction: column;
     justify-items: center;
     align-content: center;
