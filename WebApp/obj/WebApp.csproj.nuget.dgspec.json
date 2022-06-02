@@ -45,6 +45,10 @@
             "MySql.Data": {
               "target": "Package",
               "version": "[8.0.29, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.1.9, )"
             }
           },
           "imports": [

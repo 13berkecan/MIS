@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "grCm+b9Yyn25IQuAGWMrpV3C7DDrlbywppe7/9B0h1QiuFlG77retPp6vVAZxu72S3wuHquKW2cGgbWLDeNZfg==",
+  "dgSpecHash": "/9Tgq0Zk9IL7xN6ILHoC+3dHKRJg2I3uYDgCRQdkjG3gbtWwuzRvK7UmxYgrBj1028RONtUHUI831K/iSLdwNg==",
   "success": true,
   "projectFilePath": "/home/berkecan/Code/MIS/WebApp/WebApp.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "/home/berkecan/.nuget/packages/microsoft.netcore.platforms/3.1.0/microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "/home/berkecan/.nuget/packages/microsoft.win32.systemevents/4.7.0/microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "/home/berkecan/.nuget/packages/mysql.data/8.0.29/mysql.data.8.0.29.nupkg.sha512",
+    "/home/berkecan/.nuget/packages/mysqlconnector/2.1.9/mysqlconnector.2.1.9.nupkg.sha512",
     "/home/berkecan/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
     "/home/berkecan/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
     "/home/berkecan/.nuget/packages/system.configuration.configurationmanager/4.4.1/system.configuration.configurationmanager.4.4.1.nupkg.sha512",
